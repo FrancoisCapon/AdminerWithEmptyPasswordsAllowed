@@ -118,6 +118,7 @@ class Adminer {
 	*/
 	function loginForm() {
 		global $drivers;
+		echo '<div class="error">'.lang('Warning: don\'t use it in a production environment!').'</div>';
 		echo "<table cellspacing='0' class='layout'>\n";
 		echo $this->loginFormField('driver', '<tr><th>' . lang('System') . '<td>', html_select("auth[driver]", $drivers, DRIVER, "loginDriver(this);") . "\n");
 		echo $this->loginFormField('server', '<tr><th>' . lang('Server') . '<td>', '<input name="auth[server]" value="' . h(SERVER) . '" title="hostname[:port]" placeholder="localhost" autocapitalize="off">' . "\n");
@@ -145,9 +146,6 @@ class Adminer {
 	* @return mixed true for success, string for error message, false for unknown error
 	*/
 	function login($login, $password) {
-		if ($password == "") {
-			return lang('Adminer does not support accessing a database without a password, <a href="https://www.adminer.org/en/password/"%s>more information</a>.', target_blank());
-		}
 		return true;
 	}
 
