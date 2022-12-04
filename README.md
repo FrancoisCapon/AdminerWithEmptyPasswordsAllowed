@@ -12,3 +12,5 @@ You can compile as per usual your own version:
 $ php compile.php mysql en # Usage: php compile.php [editor] [driver] [lang]
 adminer-mysql-en.php created (215189 B).
 ```
+
+This version also fix the suppression of `git://` protocol for the submodules (https://github.com/vrana/adminer/pull/462).
