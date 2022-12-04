@@ -8,9 +8,7 @@ For an pedagogic hack scenario, I needed a version of adminer that allowed empty
 So, I removed the protection introduce in the 4.6.3 version and add un warning on the login form.
 
 You can compile as per usual your own version:
-```
-Usage: php compile.php [editor] [driver] [lang]
-$ php compile.php mysql en
-...
-adminer-mysql-en.php created (192627 B).
+```bash
+$ php compile.php mysql en # Usage: php compile.php [editor] [driver] [lang]
+adminer-mysql-en.php created (215189 B).
 ```
